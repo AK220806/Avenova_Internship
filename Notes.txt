@@ -1,0 +1,132 @@
+html -f
+css-f
+javascipt-b+f
+react - html + javascript (library)
+php- backend
+mysql-(database)
+
+frontend-html,css,angular,react
+backend-node,express,js,
+database- to store datas
+
+
+CSS stands for Cascading style sheets
+
+It used for add colors, change fonts, design webpage
+
+html-for structure
+css- style
+
+3 types of css
+
+1. Inline Css
+2. Internal Css
+3. Externall css
+
+<h1 style="color  :red";>Welcome</h1>
+
+h1- selector
+
+color-property    declaration
+red-value
+
+selector- id, class
+
+id - < p id="Id name"></p>------- #para1{ color: red}
+
+class - <p class="c1"></p> , <h4 class="c1"> -----  .c1 { color:red}
+
+* - > referes to universal selector its will affect full HTML elemnts on the Page
+
+
+Comment tag for css
+
+/*   -----------------  */
+
+Comment tag for HTML
+
+<!--      IUEHFIUHIUF    -->
+
+
+CSS COLOR VALUES
+
+1. rgba(red,green,blue,alpha)
+
+rgb (255,0,255,0-1)
+
+
+16/05/2026
+2. HEX VALUE
+
+#rrggbb - >#ff6347
+
+3. hsl  - hue,staturation,lightness
+h- 0 or 360
+120 - green
+240 - blue
+
+
+CSS BACKGROUNDS
+
+color
+image
+repeat
+attachment
+position
+
+CSS border style
+
+dotted - defines a dotted border
+dashed-  defines a dashed border
+solid - defines a solid border
+double - double border
+groove - 3D grooved border
+ridge
+inset
+outset
+
+hidden
+
+CSS MARGIN
+
+The Css margin properties are used to create space around elements, outside of any defined borders
+
+Margins define the distance between an element's border and the surrounding elements.
+
+Margin properties:
+
+auto- browser calcualtes the margin
+length-specifies a margin in px,cm
+%- specifies a margin in % of the width
+
+margin shorthand( margin : 50px 50px 50px 5opx;)
+
+
+Padding:
+
+The css padding are used to generate space around elemnts content,inside of any defined borders.
+
+Box model:
+
+content
+padding
+border
+margin
+
+Text-alignment
+
+text-align: center
+	left
+	right
+	justify
+
+
+JAVASCRIPT
+
+Javascript is the programming language of the web.
+
+It can calculate, manipulate and validate data.
+
+It can update and chang both HTML and CSS.
+
+getElementById()
