@@ -5,12 +5,13 @@
 <body>
 	<h2>What can Javascript Do?</h2>
 	<p id="d"></p>
+	<h3 id="h">h</h3>
 
 	<button type="button" onclick="f()">Click Me</button>
 	<button>Submit</button>
 
 	<button onclick="window.print()">Print this page</button>
-
+		<h4 id="h4">h</h4>
 	<script>
 
 		//"document.getElementById("d").innerHTML="My First JS";"
@@ -67,6 +68,238 @@ case 3: console.log("Wednesday");
 
 default: console.log("Invalid");
 }
+
+
+//for loop
+
+/*document.write("<br><br>");
+const cars=["bmw","volvo","audi"];
+let t="";
+for(let i=0;i<cars.length;i++)
+{
+	document.write(cars[i]+"<br>");
+	t+=cars[i]+"<br>";
+
+}
+document.getElementById("h").innerHTML=t;*/
+
+
+
+/*while loop
+let d="";
+
+let j=1;
+while(j <=10)
+{
+	
+	j++;
+	if(j==5){
+		continue;
+	}
+	d+="The no. is" + j + "<br>";
+}*/
+
+document.getElementById("h4").innerHTML=d;
+
+
+/*do-while loop
+let k=1;
+do{
+	console.log(" THe no.is "+k);
+	k++;
+	if(k==4)
+	{
+		continue;
+	}
+}while(k<=10);*/
+
+//Javascript Strings
+
+let ans="It's alright";// for index(0 to n-1) for length (1 - n)
+let ans1="He is called 'John'";
+let ans2=`He is called "ans"`;
+
+let ans3="       hello        ";
+let ans4="Arun Kumar";
+
+console.log(ans);
+console.log(ans1);
+console.log(ans2);
+
+//length
+
+console.log(ans.length);
+
+//charAt()
+
+console.log(ans1.charAt(2));
+
+//indexOf()
+
+console.log(ans2.indexOf("c"));
+
+//search
+
+console.log(ans1.search("z"));
+
+//startsWith()
+
+console.log(ans.startsWith("mm"));
+
+//endsWith()
+
+console.log(ans1.endsWith("'John'"));
+
+//toLowerCase
+
+console.log(ans.toLowerCase());
+
+//toUpperCase()
+
+console.log(ans.toUpperCase());
+
+//trim()
+console.log(ans3);
+console.log(ans2.trim());
+
+//replace()
+
+console.log(ans4.replace(" ",""));
+
+
+//standard function
+function Hello()
+{
+	return "Hello";
+}
+
+let m=Hello();
+console.log(m);
+console.log(Hello());
+document.write(Hello());
+
+function mul(a,b)
+{
+	return a*b;
+}
+
+
+let result=mul(4,5);
+
+console.log(result);
+
+function sayHello(name)
+{
+	return "hello " + name;
+}
+
+let g=sayHello("John");
+console.log(g);
+
+
+//Function Expression
+
+const mi=function(a,b){ 
+	return a*b;
+};
+
+console.log(mi(5,6));
+
+//Arrow Function
+
+const add1=(r,t) => r+t;
+
+
+console.log(add1(7,7));
+
+
+//Arrow Functiion with braces and return statement
+
+const add2=(r1,t1) => {
+	return r1+t1;
+}
+
+console.log(add2(8,8));
+
+//JAVASCRIPT OBJECTS
+
+const car={
+	type:"Flat",
+	model:"200",
+	color:"black"
+};
+
+//to print all key and values
+console.log(car);
+
+//to print particular value for the key
+console.log(car.type);
+
+
+
+//eg: 1  => for multiple data types   [object literal]
+
+const person={
+	firstName: "Arun",
+	lastName: "Kumar",
+	age: 21,
+
+};
+
+console.log(person.age);
+
+let ti=person;
+console.log(ti);
+
+//eg: 2
+//Create an empty object
+const person1={};
+
+//Add Properties
+person1.firstName="John";
+person1.lastNmae="Abhraham";
+person1.age=50;
+person1.destination="HR";
+
+console.log(person1);
+
+//eg: 3 using new keyword
+
+const person3=new Object({
+	firstName:"John",
+	lastName:"Arbraham",
+	age:50
+});
+
+console.log(person3.firstName+" is "+person3.age+" years old");
+
+console.log(person3["firstName"]+" is "+ person3["age"] +" years old");
+
+
+//object methods
+
+const person4={
+	firstName:"Jerone",
+	lastName:"Abraham",
+	age:30,
+	fun:function(){
+		return this.age;
+	}
+};
+
+console.log(person4.fun());
+
+const person5={
+	firstName:"Jerone",
+	lastName:"Abraham",
+	age:30,
+	fun:function(){
+		return this.firstName +" "+ this.lastName;
+	}
+};
+
+console.log(person5.fun());
+
 
 
 
