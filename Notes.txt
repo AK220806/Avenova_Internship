@@ -129,18 +129,18 @@ It can calculate, manipulate and validate data.
 
 It can update and chang both HTML and CSS.
 
-getElementById()
+getElementById(), getElementByClassName()[EG:<button type="button" onclick="document.getElementById('demo').innerHTML='Java'">Clik me</button>]
 
 javascript variables
 
 java 
+int a=10; 
 
-
-let:
+let:   let a=10; a=10.5; b='String'; c="Arun" s=true;
 
 used to declare a variable
 
-syntax: let variable name=value;
+syntax: let variable_name=value;
 
 eg: let age=20;
       console.log(age);
@@ -162,7 +162,8 @@ int b=10;
 
 Block Scope
 
-function f(){
+function f()
+{
 let a=10;
 let b=10;
 console.log(b);
@@ -174,7 +175,7 @@ Cannot redeclare in same scope
 
 function f(){
 let a=10;
-a=14;
+let a=14;
 console.log(b);
 }
 
@@ -194,20 +195,24 @@ const age=20;
 
 age=21 ; x
 
-2. Must initalize while declaring
+2. Must initalize while declaring  
 
 const a;
 a=10; x
 
-const a =10;
+
+3. Block scope
+
+
 funtion f(){
+const a =10;
 return a*a
 
 }
 
-console.log(a);
+console.log(a);x
 
-3. Block scope
+
 
 
 
@@ -225,14 +230,14 @@ Names can be short like x, y, z.
 
 Names can be descriptive age, sum, carName.
 
-The rules for constructing names (identifiers) are:   let name="arun"   console.log(Name)
+The rules for constructing names (identifiers) are:   let name="arun"   console.log(name)
 
 Names can contain letters, digits, underscores, and dollar signs.
 Names must begin with a letter, a $ sign or an underscore (_).
 Names are case sensitive (X is different from x).
 Reserved words (JavaScript keywords) cannot be used as names
 
-let const=30;
+let const=30;x
 
 let,var,const
 
@@ -247,18 +252,18 @@ String - "  ",'  '
 Number- 890,23.0,23.90978979
 Boolean- true,false(eg: x=false)          
 Object - eg:const person={firstname:"Arun",lastname:"Kumar"}; ,  array object //const cars=["bmw","safari","audi"]
-null eg: x=null;  x='';
+null eg: x=null;  ;		
 
 Javascript Operators
 
 1.Assignment operator (=)
 2. Addition Operator (+)
 3. Multiplication Operator(*)
-4.Comparison Operator(<,>)
+4.Comparison Operator(<,>,>=,<=)
 
 1. eg: let x=10;
 
-2. eg: let x=10; y=9; let z=x+y; console.log(z);
+2. eg: let x=10, y=9; let z=x+y; console.log(z);
 
 3. eg: let a=5;b=10;  letc=x*y; console.log(c);
 
@@ -276,3 +281,156 @@ javascript conditonal statements
 2. if-else
 3. if-else if-else
 4. switch
+
+Javascript Loops:
+
+1.for loop
+2.while loop
+3.do while loop
+
+1. syntax: for(initilization;condition;increment/decrement);
+	{
+		st-s
+	}
+
+2. syntax: while(condition)
+	{
+		st-s	
+	}
+
+3. syntax: do{
+	st-s
+	}
+	while(condtion);
+
+jumping statements:
+
+break - terminates the statements
+continue- skips the current iteration
+
+JAVASCRIPT STRINGS
+
+Strings are used for storing text
+strings are wirtten with quotes
+
+eg: let name="Arun";
+let c='Audi';
+
+we can use this (` `)template string for string declaration
+
+STRING METHODS
+
+length
+	The length property returns the length of a string
+
+charAt()
+
+This methods returns the character at a specified index(postition) in a string.
+
+indexOf()
+
+Its returns the index(position) of the first occurrence of a string in a string, or it return -1 - if the string not found.
+
+search()
+	This method searches a string for string and returns the postition of the match.
+
+startsWith()
+
+ this methods retruns true if a string begin with a specified with a specified value.
+
+otherwise it returns false.
+
+endsWith()
+
+this methods retuns true is a string ends with a specified value.
+
+otherwise it returns false
+
+toLowerCase()
+
+Returns a string converted to lowercase letters
+
+toUpperCase()
+
+Returns a string converted to uppercase letters
+
+trim()
+
+retuns a string with removed whitespaces
+
+
+replace()
+
+
+JAVASCRIPT FUNCTION
+
+Function are reusable code blocks designed to perfrom a particular task.
+
+Function are executed when they are called or invoked.
+
+Function are fundamental in all programming languages.
+
+Features:
+
+Reuse code(write onece,run many times)
+Organize code in smaller parts
+Make code  easier to read and maintain
+
+syntax: function functioname(){
+//st-s
+}
+
+Calling a Function
+
+A Javascript function runs when it is called
+
+To call a function , write the name followed by parentheses like functionName()
+
+Javascript Function parameters
+
+Parameters allow you to pass (send) values to the funtion.
+
+Parameters are listed inside the parentheses in the function definition.
+
+Javascript Function Arguments
+
+Arguments are the real values passed to , and received by the function
+
+The return statement
+
+When a function reaches a retrun statement , the functions stops executing
+
+Function 1- standard function
+
+Function 2- Function Expression
+
+A function expressionn is a function stored in a variable
+
+Function 3- Arrow Function
+
+Arrow function allow a shorter syntax for function expression
+
+You can skip the function keyword, the return, and the curly brackets.
+
+
+
+JAVASCRIPT OBJECTS
+
+Objects are variables that can store both values and function.
+
+Values are stored as key:Value paris called properties
+
+Function are stored as key:function() pairs called methods.
+
+Object Methods
+
+Methods are actions that can be performed on objects.
+
+Methods are function stored as property values
+
+
+this is an keyword refers to an object
+
+this is used to access the object that is calling a method
+
+
