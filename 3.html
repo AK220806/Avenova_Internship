@@ -301,6 +301,149 @@ const person5={
 console.log(person5.fun());
 
 
+//Javascript Advanced Function [Normal call()]
+
+const p1={
+	name:"John"
+};
+
+const p2={
+	name:"Sam"
+};
+
+const p3={
+	name:"Arjun"
+};
+
+function greet(greeting){
+	return greeting+ " "  + this.name;
+}
+
+console.log(greet("hello"));
+console.log(greet.call(p3,"Hello"));
+
+//eg:2  Borrow a method from another object.
+
+const p4={
+	fullName: function(){
+		return this.firstName +" "+ this.lastName;
+	}
+};
+
+const p5={
+	firstName:"Arun",
+	lastName:"Kumar"
+}
+
+const p6={
+	firstName:"Jerone",
+	lastName:"Abraham"
+}
+
+const o=p4.fullName.call(p6);
+console.log(o);
+
+//eg: 3 method from another object (method with Arguments)
+
+const p7={
+	full:function(city,country)
+	{
+	return this.firstName + " "+ this.lastName + "," +city+","+country;
+	}
+}
+
+const p8={
+	firstName: "John",
+	lastName:"Doe"
+}
+
+console.log(p7.full.call(p8,"Chennai","India"));
+
+
+
+//apply()
+
+const p11={
+	name:"John"
+};
+
+const p12={
+	name:"Sam"
+};
+
+const p13={
+	name:"Arjun"
+};
+
+function greet1(greeting){
+	return greeting+ " "  + this.name;
+}
+
+
+console.log(greet1.apply(p13,["Hello"]));
+
+//eg: 2 apply()  with argumment
+
+const v1={
+	full:function(city,country)
+	{
+		return this.firstName + " "+ this.lastName + "," +city+","+country;
+	}
+
+}
+
+const v2={
+	firstName:"A",
+	lastName:"K"
+}
+
+console.log(v1.full.apply(v2,["Chennai","India"]));
+
+//Advance Object[General Methods]
+
+//object.assign
+
+//Create Target Object
+const r1={
+	firstName:"John",
+	lastName:"Doe",
+	age:50
+};
+
+//Create Source Object
+
+const r2={
+	firstName:"Aagash",
+	lastName:"singh"
+};
+
+Object.assign(r1,r2);
+
+console.log(Object.entries(r1));
+
+//Object.keys()
+
+console.log(Object.keys(r1));
+
+//Object.values()
+
+console.log(Object.values(r1));
+
+let kk=Object.values(r1);
+
+
+//Prototype
+function g1(first,last,age)
+{
+	this.firstName=frist;
+	this.lastName=last;
+	this.age=age;
+}
+
+const my=new g1("John","Doe",50);
+const my1=new g1("Arun","Doe",50);
+
+console.log(my);
 
 
 	</script>
