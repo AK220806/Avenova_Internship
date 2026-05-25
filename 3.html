@@ -432,19 +432,160 @@ console.log(Object.values(r1));
 let kk=Object.values(r1);
 
 
-//Prototype
-function g1(first,last,age)
+
+class Car
 {
-	this.firstName=frist;
-	this.lastName=last;
-	this.age=age;
+	constructor(name,year)
+	{
+		this.name=name;
+		this.year=year;
+	}
+	age()
+	{
+		const date=new Date();
+		return date.getFullYear() - this.year;
+	}
 }
 
-const my=new g1("John","Doe",50);
-const my1=new g1("Arun","Doe",50);
+const mycar=new Car("Ford",2014);
+console.log("My car is "+mycar.age()+" years old.");
 
-console.log(my);
 
+//eg-2	Send Parameters to class Methods
+
+class Car1
+{
+	constructor(name1,year)
+	{
+		this.name1=name1;
+		this.year=year;
+	}
+	age1(x)
+	{
+		return x - this.year;
+	}
+}
+	const date=new Date();
+	let year=date.getFullYear();
+
+
+const mycar1=new Car1("Ford",2014);
+console.log("My car is "+mycar1.age1(year)+" years old.");
+
+//Asynchronous Programming=(callabck,promises,aync/await)
+
+//synchronous
+console.log("A");
+console.log("B");
+console.log("C");
+
+//asynchronous example
+
+console.log("AA");
+
+setTimeout(()=>{
+	console.log("BB");
+},3000);
+
+console.log("CC");
+
+
+//callback function
+
+function greety(name,callback)
+{
+	console.log("Hello"+ name);
+	callback();
+}
+
+function done()
+{
+	console.log("Greeting completed");
+}
+
+greety("Arun",done)
+
+//eg:2 anonymous callback function
+
+function addy(a,b,callback)
+{
+	let result=a+b;
+
+	callback(result);
+}
+
+addy(5,3, function(result){
+	console.log(result);
+});
+
+//promise
+
+//eg:1 resolve
+
+let promise=new Promise(function(resolve,reject){
+	resolve("Success");
+});
+
+promise.then(function(result){
+	console.log(result);
+});
+
+
+//eg: 2 reject
+
+let promise1=new Promise(function(resolve,reject){
+	reject("Something went password");
+});
+
+promise1.catch(function(error){
+	console.log(error)
+});
+
+//eg 3: resolve and reject
+
+let promise2=new Promise(function(resolve,reject){
+	let success=false;
+
+	if(success){
+		resolve("Login succesfully");
+	}else
+	{
+		reject("Login failed");
+	}
+});
+
+promise2.then(function(result){
+	console.log(result);
+})
+.catch(function(error){
+	console.log(error);
+});
+
+
+//async await
+
+function data()
+{
+	return new Promise(function(resolve,reject){
+		let success=true;
+		if(success){
+			resolve("Data loaded");
+		}
+		else
+		{
+			reject("loading failed");
+		}
+		
+	});
+}
+
+async function display(){
+	let result=await data();
+
+	console.log(result);
+}
+
+display();
 
 	</script>
 </body>
